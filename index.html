@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<style type="text/css">
+		body{
+			background: #FFF;		
+		}
+		#prizeContainer{
+			display: none;
+		}
+
+	</style>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-lg-6 col-md-6 col-sm-6" id="gameWindow">
+					<button id="showPrize" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Show Prize</button>
+					
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="jumbotron">
+  								<h1 id="prizeId" class="display-3"><script>prizeText</script></h1>
+  							</div>
+					    </div>
+					  </div>
+					</div>
+
+				</div>
+
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					
+
+					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="null">
+					      <!-- Indicators -->
+					      <ol class="carousel-indicators">
+					        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					        <li data-target="#myCarousel" data-slide-to="1"></li>
+					        <li data-target="#myCarousel" data-slide-to="2"></li>
+							
+					      </ol>
+					    <div class="carousel-inner" role="listbox">
+					        <div class="item active">
+					          	<img class="first-slide img-responsive" src="Sobo-cherry-plum.jpg" alt="First slide">
+					        </div>
+					        <div class="item">
+					          <img class="second-slide img-responsive" src="Sobo-cocopina.jpg" alt="Second slide">
+					        </div>
+					        <div class="item">
+					          <img class="third-slide img-responsive" src="Sobo-Cola.jpg" alt="Third slide">
+					          </div>
+					        </div>
+					        
+					    </div>
+
+					</div><!-- /.carousel -->
+
+					<div class="row">
+						<div class="col-lg-12">
+							<h1 onclick="jay(this)"></h1>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-2.1.4.min.js"><\/script>')</script>
+    	<script src="js/bootstrap.min.js" ></script>
+    	<script src="js/phaser.min.js"></script>
+		<script src="js/game.js"></script>
+		<script>
+			$('#showPrize').on('click', function () {
+				document.getElementById("prizeId").innerHTML = showPrizeWon();
+			})
+
+			function jay(id){
+				alert(showPrizeWon());
+			}
+		</script>
+
+	</body>
+</html>
